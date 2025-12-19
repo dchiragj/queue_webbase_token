@@ -47,7 +47,7 @@ const QueueForm = () => {
           `${backendUrl}/api/token/queue/${queueId}/${categoryId}`
         );
         setQueue(res.data.data);
-        
+
       } catch (err) {
         toast.error('Queue not found or currently closed');
         setQueue(null);
@@ -60,21 +60,21 @@ const QueueForm = () => {
   }, [queueId, categoryId, backendUrl]);
 
   // Check if user already has a token
-const handleMobileSubmit = async () => {
-    if (!mobile.length ) {
+  const handleMobileSubmit = async () => {
+    if (!mobile.length) {
       toast.error('Please enter a valid 10-digit mobile number OR valid email address');
       return;
     }
     const isEmail = mobile.includes('@')
     if (isEmail) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(mobile)){
+      if (!emailRegex.test(mobile)) {
         toast.error("Please enter valid email address")
         return
       }
-    }else{
+    } else {
       const mobileRegex = /^[0-9]{10}$/;
-        if (!mobileRegex.test(mobile)){
+      if (!mobileRegex.test(mobile)) {
         toast.error("Please enter valid mobile number")
         return
       }
@@ -136,7 +136,7 @@ const handleMobileSubmit = async () => {
       console.error('Failed to check token:', err);
       toast.error('Failed to check your token status');
       setActiveToken(null);
-      setIsMobileSubmitted(true); 
+      setIsMobileSubmitted(true);
     } finally {
       setCheckingToken(false);
     }
@@ -152,12 +152,13 @@ const handleMobileSubmit = async () => {
         categoryId: parseInt(categoryId),
         firstName: firstName.trim(),
         lastName: lastName.trim() || 'User',
-       identifier: mobile,
+        identifier: mobile,
       });
 
       const tokenData = res.data.data || res.data;
 
-      toast.success(`Token #${tokenData.tokenNumber} Generated Successfully!`, {
+
+      toast.success(`Token #${tokenData.tokenNumber}Generated Successfully! Kindly check your ${mobile.includes('@') ? 'email' : 'SMS'}`, {
         position: "top-center",
         autoClose: 6000,
       });
@@ -191,7 +192,7 @@ const handleMobileSubmit = async () => {
   }
 
   return (
-    <div className="container">  
+    <div className="container">
      <div className="card">
         {/* Close Button */}
         {mobile && (
