@@ -658,3 +658,176 @@ input:focus {
   font-size: 3rem;
   margin-bottom: 20px;
 }
+/* privacy-policy page */
+
+.privacy-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #ffffff;
+  line-height: 1.7;
+  border-radius: 24px;
+  box-shadow: 0 6px 30px rgba(15, 23, 42, 0.06)
+}
+
+/* Main heading */
+.privacy-title {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+  font-weight: 700; /* ✅ bold */
+}
+
+.privacy-date {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+section {
+  margin-bottom: 28px;
+}
+
+/* Section headings */
+section h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #2c3e50;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 6px;
+  font-weight: 700; /* ✅ bold */
+}
+
+.privacy-text {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/* List styling */
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 600; /* ✅ li bold */
+}
+
+/* Paragraphs */
+p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* Email bold */
+section p strong {
+  font-weight: 700; /* ✅ Email bold */
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .privacy-container {
+    padding: 20px;
+  }
+
+  .privacy-title {
+    font-size: 26px;
+  }
+
+  section h2 {
+    font-size: 18px;
+  }
+}
+
+
+/* src/ContactUs.css */
+
+.contact-container {
+  max-width: 520px;
+  margin: 50px auto;
+  padding: 25px 30px;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.contact-form ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-form li {
+  margin-bottom: 15px;
+}
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #cfcfcf;
+  outline: none;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.contact-form input:focus {
+  border-color: #4b7bec;
+  box-shadow: 0 0 0 2px rgba(75,123,236,0.2);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #4b7bec;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.contact-form button:hover {
+  background: #3867d6;
+}
+
+.contact-form button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+.message {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: green;
+}
